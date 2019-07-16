@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="528.0" prefWidth="813.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statuestore.controle.ControllerMenuAnunc">
+   <children>
+      <JFXToolbar prefHeight="57.0" prefWidth="813.0" style="-fx-background-color: ffc0cb;">
+         <left>
+            <Label prefHeight="24.0" prefWidth="274.0" text="Anúncios da Aplicação" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Product Sans" size="19.0" />
+               </font>
+               <padding>
+                  <Insets left="24.0" />
+               </padding>
+            </Label>
+         </left>
+         <right>
+            <ImageView fx:id="icnInfo" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#infoClicked" opacity="0.75" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../res/outline_info_black_48dp.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </right>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="24.0" />
+         </padding></JFXToolbar>
+      <Label layoutY="94.0" text="Mostrando apenas:">
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+         <font>
+            <Font name="Product Sans" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbFiltro" focusColor="BLACK" layoutX="154.0" layoutY="83.0" prefHeight="28.0" prefWidth="235.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <ScrollPane layoutY="140.0">
+         <content>
+            <TableView fx:id="viewAnunc" editable="true" prefHeight="388.0" prefWidth="813.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <StackPane alignment="CENTER_LEFT" layoutX="736.0" layoutY="447.0" prefHeight="57.0" prefWidth="68.0">
+         <children>
+            <JFXNodesList fx:id="nodeList" alignment="BASELINE_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="49.0" spacing="12.0" visible="false">
+               <children>
+                  <JFXButton fx:id="btnNovoAnunc" alignment="CENTER" buttonType="RAISED" maxWidth="66.0" minHeight="37.0" prefHeight="50.0" prefWidth="66.0" ripplerFill="PINK" styleClass="plusBtn" text="+" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Product Sans Bold" size="24.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btnTextAnunc" alignment="CENTER" buttonType="RAISED" cancelButton="true" contentDisplay="CENTER" minHeight="17.0" prefHeight="32.0" prefWidth="143.0" styleClass="optionBtn" text="Anúncio de Texto" />
+                  <JFXButton fx:id="btnPopUp" buttonType="RAISED" cancelButton="true" prefHeight="32.0" prefWidth="137.0" styleClass="optionBtn" text="Anúncio Pop-Up" />
+                  <JFXButton fx:id="btnBanner" buttonType="RAISED" cancelButton="true" prefHeight="32.0" prefWidth="137.0" styleClass="optionBtn" text="Anúncio em Banner" />
+                  <JFXButton fx:id="btnVideo" buttonType="RAISED" cancelButton="true" prefHeight="32.0" prefWidth="137.0" styleClass="optionBtn" text="Anúncio em Vídeo (Pop-Up)" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXNodesList>
+            <JFXButton fx:id="btnAnunc" alignment="CENTER" buttonType="RAISED" maxWidth="66.0" minHeight="37.0" onAction="#btnAnuncClicked" prefHeight="50.0" prefWidth="66.0" ripplerFill="PINK" styleClass="plusBtn" text="+" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Product Sans Bold" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </StackPane>
+      <StackPane alignment="CENTER_LEFT" layoutX="662.0" layoutY="446.0" prefHeight="57.0" prefWidth="54.0">
+         <children>
+            <JFXButton fx:id="btnAtualizar" alignment="CENTER" buttonType="RAISED" maxWidth="85.0" minHeight="25.0" minWidth="27.0" onAction="#btnAtualizarClicked" prefHeight="25.0" prefWidth="27.0" ripplerFill="PINK" style="-fx-background-color: gray;" styleClass="plusBtn" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Product Sans Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/baseline_update_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stackPane" layoutX="-1.0" prefHeight="528.0" prefWidth="813.0" visible="false" />
+   </children>
+   <stylesheets>
+      <URL value="@Styles.css" />
+   </stylesheets>
+</AnchorPane>

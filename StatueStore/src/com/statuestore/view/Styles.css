@@ -1,0 +1,114 @@
+/*
+ *
+ *Styling JFoenix Buttons*/
+.jfx-button {
+	-fx-display: block;
+	-fx-color: white;
+	-fx-background-radius: 50px;
+	-fx-border-radius: 50%;
+}
+
+.plusBtn {
+	-fx-align-content: right;
+	-fx-max-width: 50px;
+	-fx-background-color: e91d63;
+	-fx-min-height: 50px;
+	-fx-max-height: 50px;
+}
+
+.optionBtn {
+	-fx-background-color: ADADAD;
+}
+
+/**
+ *
+ *Styling the slider*/
+.jfx-slider > .track {
+     -fx-background-color: #adadad;
+}
+
+.jfx-slider > .thumb {
+     -fx-background-color: black;
+}
+
+.jfx-slider > .colored-track {
+     -fx-background-color: black;
+}
+
+.jfx-slider > .animated-thumb {
+     -fx-background-color: black;
+}
+
+.jfx-slider .slider-value {
+     -fx-fill: white;
+     -fx-stroke: white;
+}
+
+/**
+ *
+ *Styling the Table View*/
+.table-view {
+    -fx-focus-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: ffc0cb;
+    -fx-pref-height: 35pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 10, 10, 10);
+}
+
+.table-view .label {
+    -fx-font-family: "Product Sans Regular";
+    -fx-font-size: 10pt;
+    -fx-text-fill: black;
+}
+
+.table-view .table-cell {
+    -fx-pref-height: 25pt;
+    -fx-font-family: "Product Sans";
+    -fx-font-size: 10pt;
+    -fx-border-color: transparent;
+    -fx-text-fill:black;
+}
+
+.table-row-cell {
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: eaeaea;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-border-color: grey;
+}
+
+/*Tab-Pane*/
+.jfx-tab-pane .headers-region {
+    -fx-background-color: pink;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: pink;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: pink;
+    -fx-stroke-width: 50pt;
+}
+
+.tab .tab-label{
+    -fx-text-fill: black;
+    -fx-font-family: "Product Sans";
+}
+
+.jfx-tab-pane .control-buttons-tab .jfx-rippler{
+    -jfx-rippler-fill: white;
+}

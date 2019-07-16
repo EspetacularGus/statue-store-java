@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statuestore.controle.ControllerNovoAnuncio">
+   <children>
+      <JFXToolbar prefHeight="53.0" prefWidth="320.0" style="-fx-background-color: #ffc0cb;">
+         <center>
+            <Text opacity="0.74" strokeType="OUTSIDE" strokeWidth="0.0" text="Criar Novo Anúncio" wrappingWidth="248.9830722808838" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Product Sans" size="17.0" />
+               </font>
+            </Text>
+         </center>
+         <left>
+            <ImageView fx:id="icnBack" fitHeight="32.0" fitWidth="33.0" onMouseClicked="#icnBackClicked" opacity="0.74" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../res/baseline_arrow_back_black_48dp.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </left>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </JFXToolbar>
+      <Pane fx:id="pnlFixed" layoutX="26.0" layoutY="66.0" prefHeight="403.0" prefWidth="276.0">
+         <children>
+            <Pane fx:id="pnlInicio" layoutY="3.0" prefHeight="395.0" prefWidth="268.0">
+               <children>
+                  <Label layoutY="-2.0" prefHeight="79.0" prefWidth="268.0" text="Olá anunciante, aqui vamos te mostrar como criar um anúncio em nossa plataforma! Vamos começar? " wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="73.0" prefHeight="79.0" prefWidth="268.0" text="Primeiro, digite o nome do produto e o link do site ao qual o anúncio redirecionará:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtMarca" focusColor="BLACK" layoutY="160.0" prefHeight="28.0" prefWidth="268.0" promptText="Minha Marca/Produto">
+                     <font>
+                        <Font name="Product Sans Italic" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtLink" focusColor="BLACK" layoutY="215.0" prefHeight="28.0" prefWidth="268.0" promptText="www.minhamarca.com.br">
+                     <font>
+                        <Font name="Product Sans Italic" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Label fx:id="lblTermos" alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="355.0" prefHeight="35.0" prefWidth="276.0" text="Leia nossos termos e regras" textAlignment="CENTER" textFill="#3287c7" underline="true" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlInfo" layoutY="-1.0" prefHeight="302.0" prefWidth="268.0" visible="false">
+               <children>
+                  <Label layoutX="6.0" prefHeight="79.0" prefWidth="263.0" text="Ótimo! Agora escolha um nome para o seu anúncio, é assim que iremos nos referir a ele:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNome" focusColor="BLACK" layoutX="6.0" layoutY="79.0" prefHeight="28.0" prefWidth="263.0" promptText="Meu Anúncio 01">
+                     <font>
+                        <Font name="Product Sans Italic" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Label layoutX="6.0" layoutY="125.0" prefHeight="35.0" prefWidth="106.0" text="Tipo do Anúncio:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbTipoAnuncio" focusColor="BLACK" layoutX="5.0" layoutY="179.0" prefHeight="25.0" prefWidth="263.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <ImageView fx:id="icnHelp" fitHeight="28.0" fitWidth="25.0" layoutX="112.0" layoutY="130.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../res/baseline_help_outline_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="lblCustoClique" layoutX="6.0" layoutY="215.0" prefHeight="35.0" prefWidth="173.0" text="Custo por Clique: R$XX,XX" textFill="#797979" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblIndisp" layoutX="39.0" layoutY="250.0" prefHeight="53.0" prefWidth="197.0" text="Desculpe, essa funcionalidade ainda não está disponível :(" textAlignment="CENTER" textFill="#c92222" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets top="-8.0" />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlAnuncio" layoutX="-8.0" layoutY="3.0" visible="false">
+               <children>
+                  <Pane fx:id="pnlAnuncioTexto" layoutX="8.0" prefHeight="285.0" prefWidth="268.0" visible="false">
+                     <children>
+                        <Label layoutX="-5.0" layoutY="6.0" prefHeight="35.0" prefWidth="197.0" text="Preencha os dados do Anúncio:" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtTitulo" focusColor="BLACK" labelFloat="true" layoutX="-6.0" layoutY="64.0" prefHeight="28.0" prefWidth="276.0" promptText="Título ">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtSubtitulo" focusColor="BLACK" labelFloat="true" layoutX="-5.0" layoutY="118.0" prefHeight="28.0" prefWidth="276.0" promptText="Subtítulo">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+
+                        </JFXTextField>
+                        <JFXTextArea fx:id="txtTexto" focusColor="BLACK" labelFloat="true" layoutX="-8.0" layoutY="169.0" prefHeight="98.0" prefWidth="276.0" promptText="Descrição">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextArea>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAnuncioImg" layoutX="8.0" prefHeight="285.0" prefWidth="268.0" visible="false">
+                     <children>
+                        <Label layoutY="7.0" prefHeight="35.0" prefWidth="197.0" text="Preencha os dados do Anúncio:" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnImagem" defaultButton="true" layoutX="-3.0" layoutY="205.0" prefHeight="53.0" prefWidth="268.0" ripplerFill="PINK" style="-fx-background-color: fce3e7;" text="Carregar Imagem">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label layoutX="10.0" layoutY="262.0" prefHeight="28.0" prefWidth="250.0" text="Resolução recomendada:  750x850 px" textAlignment="CENTER" textFill="#727272" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="276.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAnuncioVideo" layoutX="8.0" prefHeight="309.0" prefWidth="268.0" visible="false">
+                     <children>
+                        <Label layoutY="6.0" prefHeight="35.0" prefWidth="197.0" text="Preencha os dados do Anúncio:" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnVideo" defaultButton="true" layoutX="-1.0" layoutY="53.0" prefHeight="145.0" prefWidth="276.0" ripplerFill="PINK" style="-fx-background-color: fce3e7;" text="Carregar Vídeo">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label layoutX="13.0" layoutY="192.0" prefHeight="53.0" prefWidth="242.0" text="Resolução recomendada:  1280x720 px" textAlignment="CENTER" textFill="#797979" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="213.0" prefHeight="53.0" prefWidth="190.0" text="Duração máxima: 30 segundos" textAlignment="CENTER" textFill="#727272" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlCliques" layoutY="3.0" prefHeight="285.0" prefWidth="268.0" visible="false">
+               <children>
+                  <Label layoutX="-2.0" layoutY="14.0" prefHeight="79.0" prefWidth="268.0" text="Nosso sistema de anúncios funciona por contagem de cliques.  Selecione o número de cliques para o qual seu anúncio será válido:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCliques" layoutX="-3.0" layoutY="190.0" prefHeight="35.0" prefWidth="76.0" text="100 Cliques" wrapText="true">
+                     <font>
+                        <Font name="Product Sans Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="icnHelp2" fitHeight="25.0" fitWidth="25.0" layoutX="193.0" layoutY="180.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../res/baseline_help_outline_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXSlider fx:id="sldCliques" layoutY="128.0" majorTickUnit="150.0" max="500.0" min="50.0" minorTickCount="2" prefHeight="32.0" prefWidth="268.0" showTickLabels="true" value="100.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXSlider>
+                  <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="118.0" layoutY="248.0" prefHeight="35.0" prefWidth="151.0" text="Total: R$ XXX,XX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustoClique2" layoutX="-2.0" layoutY="168.0" prefHeight="35.0" prefWidth="204.0" text="Custo por Clique: R$XX,XX" textFill="#797979" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@Styles.css" />
+               </stylesheets>
+            </Pane>
+            <Pane fx:id="pnlPagamento" layoutY="3.0" prefHeight="395.0" prefWidth="268.0" visible="false">
+               <children>
+                  <Label layoutX="-2.0" layoutY="-10.0" prefHeight="79.0" prefWidth="276.0" text="Quase pronto, só resta definir a forma de pagamento:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbTipoPagamento" focusColor="BLACK" layoutX="-5.0" layoutY="62.0" prefHeight="25.0" prefWidth="276.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <Pane fx:id="pnlCartao" layoutX="-5.0" layoutY="94.0" prefHeight="212.0" prefWidth="276.0" visible="false">
+                     <children>
+                        <JFXCheckBox fx:id="cbxSalvarCartao11" layoutY="175.0" prefHeight="18.0" prefWidth="242.0" text="Salvar cartão para futuras compras" textFill="#4d4d4d">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXTextField fx:id="txtCodigo1" focusColor="BLACK" layoutY="22.0" prefHeight="28.0" prefWidth="276.0" promptText="Nome do Titular">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCodigo11" focusColor="BLACK" layoutX="-1.0" layoutY="64.0" prefHeight="28.0" prefWidth="151.0" promptText="Número do Cartão">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCodigo111" focusColor="BLACK" layoutX="-1.0" layoutY="108.0" prefHeight="28.0" prefWidth="151.0" promptText="Data de Validade">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCodigo1111" focusColor="BLACK" layoutX="159.0" layoutY="108.0" prefHeight="28.0" prefWidth="118.0" promptText="CVV">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbBandeira" focusColor="BLACK" layoutX="158.0" layoutY="67.0" prefHeight="25.0" prefWidth="118.0" promptText="Bandeira">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXComboBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlCodigo" layoutX="-6.0" layoutY="114.0" prefHeight="172.0" prefWidth="276.0" visible="false">
+                     <children>
+                        <JFXTextField fx:id="txtCodigo" focusColor="BLACK" layoutX="1.0" layoutY="21.0" prefHeight="28.0" prefWidth="276.0" promptText="Digite aqui seu Código">
+                           <font>
+                              <Font name="Product Sans Italic" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <Label layoutX="1.0" layoutY="31.0" prefHeight="155.0" prefWidth="276.0" text="Atenção: Esse código é único e válido para uso somente uma vez." wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlBoleto" layoutX="-2.0" layoutY="124.0" prefHeight="172.0" prefWidth="304.0" visible="false">
+                     <children>
+                        <Label opacity="0.73" prefHeight="79.0" prefWidth="276.0" text="O boleto gerado terá a validade de três dias e será disponibilizado para download na próxima etapa" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Product Sans" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Hyperlink fx:id="lnkPagarDepois" layoutX="28.0" layoutY="368.0" text="Salvar Anúncio e pagar mais tarde" underline="true" visible="false">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="127.0" layoutY="348.0" prefHeight="25.0" prefWidth="18.0" text="ou" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlConfirm" layoutY="3.0" prefHeight="383.0" prefWidth="276.0" visible="false">
+               <children>
+                  <JFXButton fx:id="btnCancelar" buttonType="RAISED" layoutY="355.0" onAction="#btnContinuarClicked" prefHeight="28.0" prefWidth="276.0" style="-fx-background-color: adadad;" text="Cancelar Anúncio" viewOrder="10.0">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="-1.0" layoutY="14.0" prefHeight="28.0" prefWidth="133.0" text="Seu anúncio:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="150.0" prefHeight="35.0" prefWidth="118.0" text="Nome do Anúncio: " wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgAnuncio" fitHeight="105.0" fitWidth="276.0" layoutX="-1.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutY="173.0" prefHeight="35.0" prefWidth="106.0" text="Tipo do Anúncio:" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="197.0" prefHeight="35.0" prefWidth="106.0" text="Cliques Válidos: " wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="222.0" prefHeight="35.0" prefWidth="82.0" text="Custo Total: " wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="245.0" prefHeight="35.0" prefWidth="142.0" text="Forma de Pagamento: " wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNomeAnunc" alignment="CENTER_RIGHT" layoutX="125.0" layoutY="153.0" prefHeight="25.0" prefWidth="151.0" text="XXXXXXX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTipoAnunc" alignment="CENTER_RIGHT" layoutX="135.0" layoutY="178.0" prefHeight="25.0" prefWidth="142.0" text="XXXXXXX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCliques2" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="202.0" prefHeight="25.0" prefWidth="159.0" text="XXXXXXX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCusto" alignment="CENTER_RIGHT" layoutX="103.0" layoutY="227.0" prefHeight="25.0" prefWidth="173.0" text="XXXXXXX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPagamento" alignment="CENTER_RIGHT" layoutX="158.0" layoutY="250.0" prefHeight="25.0" prefWidth="118.0" text="XXXXXXX" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlSucesso" layoutY="3.0" prefHeight="285.0" prefWidth="268.0" visible="false">
+               <children>
+                  <Label layoutX="-2.0" layoutY="14.0" prefHeight="79.0" prefWidth="276.0" text="Parabéns! Logo seu anúncio será analisado por um de nosso administradores e, se estiver tudo certo, começará a aparecer em nossa plataforma ;)" wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="-2.0" layoutY="110.0" prefHeight="79.0" prefWidth="276.0" text="Acompanhe esse processo pela página inicial, procurando pelo seu novo anúncio." wrapText="true">
+                     <font>
+                        <Font name="Product Sans" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <StackPane layoutX="21.0" layoutY="367.0" prefHeight="63.0" prefWidth="288.0">
+         <children>
+            <JFXButton fx:id="btnContinuar" buttonType="RAISED" onAction="#btnContinuarClicked" prefHeight="35.0" prefWidth="276.0" style="-fx-background-color: e91d63;" text="VAMOS NESSA!" textFill="WHITE" viewOrder="10.0">
+               <font>
+                  <Font name="Product Sans Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stackPane" prefHeight="480.0" prefWidth="320.0" visible="false" />
+   </children>
+</AnchorPane>
