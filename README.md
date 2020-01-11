@@ -46,10 +46,10 @@ Após o usuário preencher todos os campos acima com os seus próprios dados, co
 Os dois menus são bem parecidos, mas se diferem em alguns pontos.
 Abaixo a legenda para os retângulos da primeira imagem:
 
-**Retângulo Azul:** Disponível em ambos os menus, serve para atualizar os cadastros visíveis na tabela.
-**Retângulo Verde:** Disponível em ambos os menus, exibe as informações do usuário atual:
-**Retângulo Roxo:** Disponível em ambos os menus, filtra os dados dos anúncios exibidos na tabela
-**Retângulo Vermelho:** Disponível apenas no menu do anunciante, abre a tela de cadastro de um novo anúncio.
+* **Retângulo Azul:** Disponível em ambos os menus, serve para atualizar os cadastros visíveis na tabela.
+* **Retângulo Verde:** Disponível em ambos os menus, exibe as informações do usuário atual.
+* **Retângulo Roxo:** Disponível em ambos os menus, filtra os dados dos anúncios exibidos na tabela.
+* **Retângulo Vermelho:** Disponível apenas no menu do anunciante, abre a tela de cadastro de um novo anúncio.
 
 ### Telas de Cadastro de Novo Anúncio
 
